@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ]
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": "import", "next": "*" },
+      { "blankLine": "any", "prev": "import", "next": "import" },
+      { "blankLine": "always", "prev": "*", "next": "block-like" },
+      { "blankLine": "always", "prev": "block-like", "next": "*" },
+      {
+        "blankLine": "any",
+        "prev": ["singleline-const", "singleline-let", "singleline-var"],
+        "next": ["singleline-const", "singleline-let", "singleline-var"]
+      }
+    ],
+    "comma-dangle": ["error", "always-multiline"],
+    "curly": ["error", "all"],
+    "no-console": "error",
+    "eqeqeq": "error"
+  }
 }
