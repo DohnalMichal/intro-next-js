@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-export const Todo = styled.div<{ completed: boolean }>`
+export const Root = styled.div<{ completed: boolean }>`
+  display: flex;
+  justify-content: space-between;
+
   background-color: white;
   border: 2px solid #ff3373;
   padding: 1rem;
@@ -41,3 +44,5 @@ export const Todo = styled.div<{ completed: boolean }>`
 export const Text = styled.span`
   color: #242e4f;
 `
+
+export const DeleteButton = styled.button``

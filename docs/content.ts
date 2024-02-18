@@ -15,6 +15,16 @@ export const docs: DocsContent = {
     details:
       'Detailed information about how to make a POST request to create todos.',
   },
+  'api/todo/id/put': {
+    method: 'PUT',
+    path: 'api/todo/id',
+    description: 'Update the completion status of a specific todo by ID',
+    details:
+      'Detailed information about how to make a PUT request to update the completion status of a specific todo by ID.',
+    example: {
+      action: 'complete',
+    },
+  },
   'api/todo/id/get': {
     method: 'GET',
     path: 'api/todo/[id]',

@@ -1,20 +1,28 @@
 'use client'
 
 import { useTransition } from 'react'
-import { completeTodo } from '@/utils/actions'
-import { Todo as StyledTodo, Text } from './styles'
+import { completeTodo, deleteTodo, undoTodo } from '@/utils/actions'
+import { Root, Text, DeleteButton } from './styles'
 import type { Props } from './types'
 
 const Todo = ({ todo }: Props) => {
   const [, startTransition] = useTransition()
 
+  const onUpdate = () => {
+    startTransition(() =>
+      todo.completed ? undoTodo(todo.id) : completeTodo(todo.id),
+    )
+  }
+
+  const onDelete = () => {
+    startTransition(() => deleteTodo(todo.id))
+  }
+
   return (
-    <StyledTodo
-      completed={todo.completed}
-      onClick={() => startTransition(() => completeTodo(todo.id))}
-    >
+    <Root completed={todo.completed} onClick={onUpdate}>
       <Text>{todo.content}</Text>
-    </StyledTodo>
+      <DeleteButton onClick={onDelete}>❌</DeleteButton>
+    </Root>
   )
 }
 

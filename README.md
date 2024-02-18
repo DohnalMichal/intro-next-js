@@ -4,15 +4,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Overview
 
-This is a Next.js application that leverages Prisma for database interactions and Next API routes with new server actions. The app provides API documentation using a dynamic routing structure and showcases a combination of Tailwind CSS for layouts and Styled-Components for individual components.
+This is a Next.js application that leverages Prisma for database interactions and Next Route handlers and new server actions. The app provides API documentation using a dynamic routing structure and showcases a combination of Tailwind CSS for layouts and Styled-Components for individual components.
 
 ## Features
 
 Prisma Integration: Utilizes Prisma for seamless interaction with the database, making it easy to manage and query data.
 
-Next API Routes: Leverages Next.js API routes with the new server actions (get, post, delete) to handle various CRUD operations.
+Next API Routes: Leverages Next.js API Route handlers with the new server actions (GET, POST, PUT, DELETE) to handle various CRUD operations.
 
-Dynamic Documentation: Dynamically generates API documentation pages based on the content stored in content.json.
+Dynamic Documentation: Dynamically generates API documentation pages based on the content stored in content.ts.
 
 Styling with Tailwind CSS and Styled-Components: Utilizes Tailwind CSS for layout styling and Styled-Components for component-specific styling, providing a flexible and modular approach to styling.
 

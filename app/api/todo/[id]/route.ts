@@ -18,3 +18,27 @@ export const DELETE = async (request: Request, { params }: Props) => {
 
   return NextResponse.json({ data: todo })
 }
+
+export const PUT = async (request: Request, { params }: Props) => {
+  const { action } = await request.json()
+
+  const updateCompletedStatus = async (completed: boolean) => {
+    const todo = await db.todo.update({
+      where: { id: params.id },
+      data: {
+        completed,
+      },
+    })
+
+    return NextResponse.json({ data: todo })
+  }
+
+  switch (action) {
+    case 'complete':
+      return updateCompletedStatus(true)
+    case 'undo':
+      return updateCompletedStatus(false)
+    default:
+      return NextResponse.json({ success: false })
+  }
+}
