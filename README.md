@@ -57,7 +57,8 @@ npm run dev
 
 5. Open your browser and navigate to http://localhost:3000 to view the app.
 
-##Technologies Used
+## Technologies Used
+
 Next.js: A React framework for building server-rendered applications.
 
 Prisma: A modern database toolkit for TypeScript and Node.js that makes database access easy and efficient.
